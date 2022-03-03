@@ -1,5 +1,5 @@
 steps:
-- name: golang
+- name: node
   entrypoint: /bin/bash
   args:
     - '-c'
